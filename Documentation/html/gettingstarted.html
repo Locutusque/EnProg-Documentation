@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <header><h1>EnProg Documentation</h1></header>
+        <style>
+            /* Base styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      /* Header styles */
+      header {
+        background-color: #3498db;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      /* Sidebar styles */
+      .sidebar {
+        background-color: #f2f2f2;
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+      
+      .sidebar a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      
+      .sidebar a.active {
+        background-color: #4CAF50;
+        color: white;
+      }
+      
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+      
+      /* Main content styles */
+      .main {
+        margin-left: 200px;
+        padding: 20px;
+      }
+
+      /* Fancy styles */
+      h1 {
+        font-size: 36px;
+        color: #3498db;
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: justify;
+        margin-bottom: 40px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      
+    </style>    
+    <div class="sidebar">
+      <a href="documentation.html">Introduction</a>
+      <a href="installation.html">Installation</a>
+      <a class="active" href="gettingstarted.html">Getting Started</a>
+      <a href="syntax.html">Syntax</a>
+      <a href="#">Variables</a>
+      <a href="#">Control Structures</a>
+      <a href="#">Functions</a>
+      <a href="#">Examples</a>
+      <a href="#">Coding Conventions</a>
+    </div>
+    <div class="main">
+        <h1>Python Variant</h1>
+        <p>To get started with the Python Variant, you can import it at the top of your script using "from ENPROG.enprog import EnProg"</p>
+        <P>To keep your code clean, I suggest that you import it as "EP" or "ep"</P>
+        <p>To run your EnProg code, you can use the run_program(file_path) function, where the file_path parameter is a directory for the file that you want to run</p>
+        <p>You can use the check_syntax(program) function to check the syntax of given code. The program paramter is a string of the code that you want to check (it is not a directory). This returns a list of errors found in the given code. Keep in mind that this function may be unstable because it has not been tested much</p>
+        <p>The translate_program(program) function where the program parameter is a string that contains code, translates the given code into Python. This returns a string, which is the Python equivalent from the EnProg code.</p>
+        <p>You can import all of your EnProg code into a Python script using the importPackage(file_path, class_name) function, where the file_path is the path of the file that you want to import, and class_name is the name of class that you want to import. This function returns an instance of the imported class.</p>
+        <p>The deprecated function getPackage, should not, but can be used to import packages from EnProg. This function has one parameter which is a string for the directory of the file that you wish to import. This returns the directory for a compiled file that can then be imported</p>
+        <p>You can also use the command prompt to run EnProg code. Usage: enprog [run|import|check|translate] [parameters for the corresponding function]</p>
+        <h1>Java Variant (untested could be unstable)</h1>
+        <p>To get started with the Java Variant, you can set the github repository of this as a dependency in your pom.xml, or download it manually from GitHub</p>
+        <p>The Java Variant has the same functions and parameters as the Python Variant. The only difference is that it cannot be run immediately like the Python Variant because Java is a compiled progrmaming language.</p>
+        <p>The functions are the same, but the names are changed to follow coding conventions. The renamed functions are: translateProgram, runProgram, checkSyntax, getPackage, importPackage</p>
+        
+    </div>
+    </head>
+</html>
